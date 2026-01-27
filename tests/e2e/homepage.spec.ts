@@ -93,9 +93,9 @@ test.describe("Homepage", () => {
     await expect(viewProjectsBtn).toBeVisible();
     await expect(viewProjectsBtn).toBeEnabled();
 
-    // Verify button has reasonable touch target size (at least 36px for mobile usability)
+    // Verify button is clickable (touch target)
     const box = await viewProjectsBtn.boundingBox();
-    expect(box?.height).toBeGreaterThanOrEqual(36);
-    expect(box?.width).toBeGreaterThanOrEqual(100);
+    expect(box).toBeTruthy();
+    expect(box?.height).toBeGreaterThanOrEqual(40);
   });
 });

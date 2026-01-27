@@ -29,43 +29,29 @@ export function Hero() {
       aria-label="Introduction"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
-        <div className="grid gap-8 md:grid-cols-2 md:gap-12 items-center">
-          {/* Profile Photo - Left on desktop, top on mobile */}
-          <div className="flex justify-center md:justify-start order-1 md:order-1">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              <Image
-                src={profile.photo.src}
-                alt={profile.photo.alt}
-                width={profile.photo.width}
-                height={profile.photo.height}
-                priority
-                className="rounded-full object-cover shadow-lg ring-4 ring-primary/10"
-              />
-            </div>
-          </div>
-
-          {/* Content - Right on desktop, bottom on mobile */}
-          <div className="text-center md:text-left order-2 md:order-2">
+        <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:gap-16 items-center">
+          {/* Content - Left on desktop, bottom on mobile */}
+          <div className="text-center md:text-left order-2 md:order-1">
             {/* Heading */}
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl lg:text-6xl">
               Hi, I&apos;m{" "}
               <span className="text-primary">{profile.name}</span>
             </h1>
 
             {/* Title */}
-            <p className="mt-4 text-xl font-semibold text-muted-foreground md:text-2xl">
+            <p className="mt-3 sm:mt-4 text-lg font-semibold text-muted-foreground sm:text-xl md:text-2xl">
               {profile.title}
             </p>
 
             {/* Tagline */}
-            <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
+            <p className="mt-3 sm:mt-4 text-base sm:text-lg text-muted-foreground max-w-xl mx-auto md:mx-0">
               {profile.tagline}
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-4 justify-center md:justify-start">
               {/* View Projects - Primary CTA */}
-              <Button asChild size="lg" className="min-h-[44px] min-w-[44px]">
+              <Button asChild size="default" className="min-h-[44px] sm:h-11 sm:px-8">
                 <a href="#projects" onClick={handleScrollToProjects}>
                   View Projects
                 </a>
@@ -76,11 +62,11 @@ export function Hero() {
                 <Button
                   asChild
                   variant="outline"
-                  size="lg"
-                  className="min-h-[44px] min-w-[44px]"
+                  size="default"
+                  className="min-h-[44px] sm:h-11 sm:px-8"
                 >
                   <ExternalLink href={githubLink.url} aria-label={githubLink.label}>
-                    <Github className="mr-2 h-5 w-5" aria-hidden="true" />
+                    <Github className="mr-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                     GitHub
                   </ExternalLink>
                 </Button>
@@ -91,11 +77,11 @@ export function Hero() {
                 <Button
                   asChild
                   variant="outline"
-                  size="lg"
-                  className="min-h-[44px] min-w-[44px]"
+                  size="default"
+                  className="min-h-[44px] sm:h-11 sm:px-8"
                 >
                   <ExternalLink href={linkedinLink.url} aria-label={linkedinLink.label}>
-                    <Linkedin className="mr-2 h-5 w-5" aria-hidden="true" />
+                    <Linkedin className="mr-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                     LinkedIn
                   </ExternalLink>
                 </Button>
@@ -105,14 +91,28 @@ export function Hero() {
               <Button
                 asChild
                 variant="secondary"
-                size="lg"
-                className="min-h-[44px] min-w-[44px]"
+                size="default"
+                className="min-h-[44px] sm:h-11 sm:px-8"
               >
                 <a href={`mailto:${profile.email}`} aria-label="Send email">
-                  <Mail className="mr-2 h-5 w-5" aria-hidden="true" />
+                  <Mail className="mr-2 h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
                   Contact
                 </a>
               </Button>
+            </div>
+          </div>
+
+          {/* Profile Photo - Right on desktop, top on mobile */}
+          <div className="flex justify-center md:justify-end order-1 md:order-2">
+            <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
+              <Image
+                src={profile.photo.src}
+                alt={profile.photo.alt}
+                width={profile.photo.width}
+                height={profile.photo.height}
+                priority
+                className="rounded-full object-cover shadow-2xl ring-4 ring-primary/20 w-full h-full"
+              />
             </div>
           </div>
         </div>
