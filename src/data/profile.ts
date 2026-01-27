@@ -5,7 +5,7 @@ export const profile: Profile = {
   title: "Agentic AI Engineer + Full Stack Developer",
   tagline:
     "Designing and engineering intelligent, agent-driven systems with modern full-stack architecture",
-  email: "asad@example.com", // TODO: Replace with actual email
+  email: "asad2747982@gmail.com",
   photo: {
     src: "/images/MyPic.jpeg",
     alt: "Asad Ali - Agentic AI Engineer and Full Stack Developer",
@@ -15,12 +15,12 @@ export const profile: Profile = {
   socialLinks: [
     {
       platform: "github",
-      url: "https://github.com/asadaligith", // TODO: Replace with actual GitHub
+      url: "https://github.com/asadaligith",
       label: "GitHub Profile",
     },
     {
       platform: "linkedin",
-      url: "https://linkedin.com/in/asadali", // TODO: Replace with actual LinkedIn
+      url: "https://www.linkedin.com/in/asad-ali-1a3070268",
       label: "LinkedIn Profile",
     },
   ],
