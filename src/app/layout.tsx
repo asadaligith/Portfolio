@@ -1,6 +1,19 @@
 import type { Metadata } from "next";
 import { siteMetadata } from "@/data/site-metadata";
+import { profile } from "@/data/profile";
 import "./globals.css";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  jobTitle: profile.title,
+  url: siteMetadata.siteUrl,
+  image: `${siteMetadata.siteUrl}${profile.photo.src}`,
+  description: profile.tagline,
+  email: `mailto:${profile.email}`,
+  sameAs: profile.socialLinks.map((link) => link.url),
+};
 
 export const metadata: Metadata = {
   title: siteMetadata.title,
@@ -50,6 +63,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-background font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
