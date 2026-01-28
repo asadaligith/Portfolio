@@ -1,7 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ExternalLink } from "@/components/shared/external-link";
+import { FadeIn } from "@/components/shared/motion";
 import { profile } from "@/data/profile";
 import { Mail, Github, Linkedin } from "lucide-react";
 
@@ -20,16 +23,19 @@ export function Contact() {
       aria-label="Contact"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
-        <SectionHeading className="text-center mb-4">
-          Get In Touch
-        </SectionHeading>
+        <FadeIn>
+          <SectionHeading className="text-center mb-4">
+            Get In Touch
+          </SectionHeading>
 
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          I&apos;m always open to discussing new opportunities, interesting projects,
-          or collaborations. Feel free to reach out!
-        </p>
+          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+            I&apos;m always open to discussing new opportunities, interesting projects,
+            or collaborations. Feel free to reach out!
+          </p>
+        </FadeIn>
 
-        <Card className="max-w-md mx-auto">
+        <FadeIn delay={0.2}>
+          <Card className="max-w-md mx-auto hover:shadow-lg transition-shadow duration-300">
           <CardHeader className="text-center">
             <CardTitle>Let&apos;s Connect</CardTitle>
             <CardDescription>
@@ -80,7 +86,8 @@ export function Contact() {
               )}
             </div>
           </CardContent>
-        </Card>
+          </Card>
+        </FadeIn>
       </div>
     </section>
   );

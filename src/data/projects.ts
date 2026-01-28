@@ -2,57 +2,48 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    id: "ai-agent-platform",
-    name: "AI Agent Platform", // TODO: Replace with actual project name
+    id: "ai-robotics-book",
+    name: "AI Humanoid Robotics Book",
     description:
-      "A comprehensive platform for building, deploying, and managing autonomous AI agents. Features multi-agent orchestration, tool integration, and real-time monitoring.",
-    techStack: ["LangChain", "Python", "FastAPI", "React", "PostgreSQL", "Redis"],
-    githubUrl: "https://github.com/asadaligith/ai-agent-platform", // TODO: Replace with actual URL
-    demoUrl: "https://ai-agents.demo.com", // TODO: Replace with actual URL
+      "An interactive digital book exploring AI and humanoid robotics concepts with an integrated AI chatbot. Features comprehensive documentation on robotics principles, AI integration, and future technologies.",
+    techStack: ["Docusaurus", "Python", "TypeScript", "JavaScript", "CSS"],
+    githubUrl: "https://github.com/asadaligith/AI-Humanoid-Robotics-Book",
+    demoUrl: "https://asadaligith.github.io/AI-Humanoid-Robotics-Book/",
     featured: true,
     order: 1,
   },
   {
-    id: "rag-knowledge-base",
-    name: "RAG Knowledge Base", // TODO: Replace with actual project name
+    id: "todo-web-application",
+    name: "Full Stack Todo Web Application",
     description:
-      "An intelligent document retrieval system using Retrieval-Augmented Generation. Supports multiple file formats with semantic search and context-aware responses.",
-    techStack: ["LangChain", "OpenAI", "Pinecone", "Next.js", "TypeScript"],
-    githubUrl: "https://github.com/asadaligith/rag-knowledge-base", // TODO: Replace with actual URL
-    demoUrl: "https://rag-kb.demo.com", // TODO: Replace with actual URL
+      "A complete full-stack todo application with user authentication, task management, and persistent storage. Built with modern web technologies for seamless task tracking.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    githubUrl: "https://github.com/asadaligith/Todo-Web-Application",
+    demoUrl: "https://todo-web-application-two.vercel.app/",
     featured: true,
     order: 2,
   },
   {
-    id: "fullstack-saas-starter",
-    name: "Full Stack SaaS Starter", // TODO: Replace with actual project name
+    id: "ai-todo-chatbot",
+    name: "Full Stack AI Todo Chatbot",
     description:
-      "A production-ready SaaS boilerplate with authentication, billing, multi-tenancy, and a complete CI/CD pipeline. Built with modern best practices.",
-    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    githubUrl: "https://github.com/asadaligith/saas-starter", // TODO: Replace with actual URL
+      "An intelligent AI-powered todo chatbot that helps manage tasks through natural language conversations. Combines task management with conversational AI for enhanced productivity.",
+    techStack: ["Next.js", "TypeScript", "OpenAI", "Tailwind CSS", "Vercel"],
+    githubUrl: "https://github.com/asadaligith/AI-Todo-Chatbot",
+    demoUrl: "https://ai-todo-chatbot.vercel.app/",
     featured: true,
     order: 3,
   },
   {
-    id: "realtime-collab-editor",
-    name: "Real-time Collaborative Editor", // TODO: Replace with actual project name
+    id: "ecommerce-marketplace",
+    name: "E-Commerce Marketplace",
     description:
-      "A collaborative document editor with real-time synchronization, presence indicators, and version history. Supports rich text formatting and comments.",
-    techStack: ["React", "TypeScript", "WebSockets", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com/asadaligith/collab-editor", // TODO: Replace with actual URL
-    demoUrl: "https://collab-editor.demo.com", // TODO: Replace with actual URL
+      "A full-featured e-commerce marketplace built during a hackathon. Includes product listings, shopping cart, checkout flow, and responsive design for all devices.",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    githubUrl: "https://github.com/asadaligith/Marketplace_Hackathon",
+    demoUrl: "https://marketplace-hackathon-peach.vercel.app/",
     featured: true,
     order: 4,
-  },
-  {
-    id: "devops-automation-toolkit",
-    name: "DevOps Automation Toolkit", // TODO: Replace with actual project name
-    description:
-      "A collection of scripts and tools for automating cloud infrastructure, CI/CD pipelines, and deployment workflows across multiple cloud providers.",
-    techStack: ["Python", "Terraform", "Docker", "AWS", "GitHub Actions"],
-    githubUrl: "https://github.com/asadaligith/devops-toolkit", // TODO: Replace with actual URL
-    featured: true,
-    order: 5,
   },
 ];
 
