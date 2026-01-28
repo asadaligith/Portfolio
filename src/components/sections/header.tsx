@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { profile } from "@/data/profile";
 import { Menu, X } from "lucide-react";
 
@@ -49,14 +50,17 @@ export function Header() {
                 {link.label}
               </a>
             ))}
+            <ThemeToggle />
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden min-h-[44px] min-w-[44px]"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          {/* Mobile Menu Button & Theme Toggle */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="min-h-[44px] min-w-[44px]"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
           >
@@ -66,6 +70,7 @@ export function Header() {
               <Menu className="h-6 w-6" aria-hidden="true" />
             )}
           </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

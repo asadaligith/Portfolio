@@ -1,8 +1,11 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { ExternalLink } from "@/components/shared/external-link";
 import { SkillBadge } from "@/components/shared/skill-badge";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/shared/motion";
 import { getFeaturedProjects } from "@/data/projects";
 import { Github, ExternalLink as ExternalLinkIcon } from "lucide-react";
 
@@ -16,13 +19,16 @@ export function Projects() {
       aria-label="Featured Projects"
     >
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
-        <SectionHeading className="text-center mb-12">
-          Featured Projects
-        </SectionHeading>
+        <FadeIn>
+          <SectionHeading className="text-center mb-12">
+            Featured Projects
+          </SectionHeading>
+        </FadeIn>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
           {featuredProjects.map((project) => (
-            <Card key={project.id} className="flex flex-col h-full">
+            <StaggerItem key={project.id}>
+              <Card className="flex flex-col h-full hover:shadow-xl transition-all duration-300 hover:border-primary/50 hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="text-xl">{project.name}</CardTitle>
                 <CardDescription className="line-clamp-3">
@@ -76,9 +82,10 @@ export function Projects() {
                   )}
                 </div>
               </CardContent>
-            </Card>
+              </Card>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

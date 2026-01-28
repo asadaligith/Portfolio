@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { siteMetadata } from "@/data/site-metadata";
 import { profile } from "@/data/profile";
+import { ThemeProvider } from "@/components/shared/theme-provider";
 import "./globals.css";
 
 const jsonLd = {
@@ -61,13 +62,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-background font-sans antialiased">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-background font-sans antialiased transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
