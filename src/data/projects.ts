@@ -45,6 +45,17 @@ export const projects: Project[] = [
     featured: true,
     order: 4,
   },
+  {
+    id: "ai-clinic-management-system",
+    name: "Full Stack Application: AI Clinic Management System",
+    description:
+      "An AI-powered clinic management system that streamlines patient records, appointment scheduling, and clinical workflows. Built with a modern full-stack architecture featuring a React frontend, Express backend, and MongoDB database.",
+    techStack: ["React", "Express", "MongoDB"],
+    githubUrl: "https://github.com/asadaligith/AI_Clinic_Management_System",
+    demoUrl: "https://ai-clinic-management-system.vercel.app/",
+    featured: true,
+    order: 5,
+  },
 ];
 
 /**
